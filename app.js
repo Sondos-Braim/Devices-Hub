@@ -70,8 +70,9 @@ if(localStorage.getItem('devices')){
 function total(){
 var totalPrice=0;
 var pEl=document.getElementById('total');
+sectionEl.appendChild(pEl);
 for(var i=0;i<devices.length;i++){
-totalPrice+=devices[i].price;
+totalPrice+=devices[i].price*devices[i].quantity;
 pEl.textContent=`Total: ${totalPrice}`;
 }
 }
